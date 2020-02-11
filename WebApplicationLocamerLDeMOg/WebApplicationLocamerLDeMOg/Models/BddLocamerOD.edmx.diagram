@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="29c5a3634ac04b3cb5b7ad81ec7a31bf" Name="Diagram1">
+        <EntityTypeShape EntityType="LocamerMOgModel.Categorie" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocamerMOgModel.Client" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocamerMOgModel.DetailReserv" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocamerMOgModel.DetailSej" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocamerMOgModel.Emplacement" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocamerMOgModel.OptionSej" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocamerMOgModel.Sejour" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocamerMOgModel.Tarif" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <AssociationConnector Association="LocamerMOgModel.FK__Sejour__idCate__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="LocamerMOgModel.FK__Sejour__idCli__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="LocamerMOgModel.FK__DetailRes__idOpt__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="LocamerMOgModel.FK__DetailRes__idSej__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="LocamerMOgModel.FK__DetailSej__empla__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="LocamerMOgModel.FK__DetailSej__idSej__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="LocamerMOgModel.FK_dbo_Tarif_dbo_Emplacement_codeTarif" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
