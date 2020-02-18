@@ -18,7 +18,7 @@
         @Html.HiddenFor(model => model.idCate)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.libelleCate, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.libelleCate, "Libellé catégorie", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.libelleCate, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.libelleCate, "", new { @class = "text-danger" })
@@ -26,7 +26,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.coefCate, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.coefCate, "Coefficient catégorie",htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.coefCate, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.coefCate, "", new { @class = "text-danger" })
