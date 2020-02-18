@@ -1,0 +1,42 @@
+﻿@model WebApplicationLocamerLDeMOg.Models.Emplacement
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Emplacement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.capacité)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.capacité)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.terrasse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.terrasse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarif.libelleTarif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tarif.libelleTarif)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.emplacement1 }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

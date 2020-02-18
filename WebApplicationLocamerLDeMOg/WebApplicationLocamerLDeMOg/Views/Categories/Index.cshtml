@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WebApplicationLocamerLDeMOg.Models.Categorie>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.libelleCate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.coefCate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.libelleCate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.coefCate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idCate }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idCate }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idCate })
+        </td>
+    </tr>
+}
+
+</table>
