@@ -1,10 +1,10 @@
 ﻿@model WebApplicationLocamerLDeMOg.Models.Sejour
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detail";
 }
 
-<h2>Details</h2>
+<h2>Detail du Séjour</h2>
 
 <div>
     <h4>Sejour</h4>
@@ -45,8 +45,81 @@
     </dl>
 </div>
 
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idSejour }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<h2>Emplacement du séjour</h2>
 
+<table class="table">
+    <tr>
+        <th>
+            Code
+        </th>
+        <th>
+            Capacité
+        </th>
+        <th>
+            Terrasse
+        </th>
+        <th>
+            Catégorie
+        </th>
+    </tr>
+
+    @foreach (var item in Model.DetailSej)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emplacement1.emplacement1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emplacement1.capacité)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emplacement1.terrasse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emplacement1.Tarif.libelleTarif)
+            </td>
+        </tr>
+    }
+</table>
+
+<h2>Options du séjour</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Libelle option
+        </th>
+        <th>
+            Prix de l'option
+        </th>
+        <th>
+            Durée de location
+        </th>
+        <th>
+            Quantité
+        </th>
+    </tr>
+
+    @foreach (var item in Model.DetailReserv)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OptionSej.libelleOption)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OptionSej.prixOption)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nbJour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantite)
+            </td>
+        </tr>
+    }
+</table>
+
+<p>
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.idSejour }) |
+    @Html.ActionLink("Retourner à la liste", "Index")
+</p>
