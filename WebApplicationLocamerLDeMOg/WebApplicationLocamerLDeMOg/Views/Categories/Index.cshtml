@@ -9,7 +9,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Créer une nouvelle option", "Create")
 </p>
 <table class="table">
     <tr>
@@ -31,8 +31,8 @@
             @Html.DisplayFor(modelItem => item.coefCate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idCate }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idCate })
+            @Html.ActionLink("Modifier", "Edit", new { id=item.idCate }) |
+            @Html.ActionLink("Supprimer", "Delete", new { id=item.idCate })
         </td>
     </tr>
 }

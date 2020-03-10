@@ -1,18 +1,18 @@
 ﻿@model WebApplicationLocamerLDeMOg.Models.Categorie
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Supprimer";
 }
 
 <h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Voulez-vous vraiment supprimer cet élément ?</h3>
 <div>
     <h4>Categorie</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.libelleCate)
+            Libellé catégorie :
         </dt>
 
         <dd>
@@ -20,7 +20,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.coefCate)
+            Coéfficient catégorie :
         </dt>
 
         <dd>
@@ -33,8 +33,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Supprimer" class="btn btn-default" /> |
+            @Html.ActionLink("Retourner à la liste", "Index")
         </div>
     }
 </div>
