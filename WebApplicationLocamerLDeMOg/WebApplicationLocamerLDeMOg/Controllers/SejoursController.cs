@@ -22,8 +22,9 @@ namespace WebApplicationLocamerLDeMOg.Controllers
         }
 
         // GET: Sejours/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int? id, FormCollection form)
         {
+            
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -33,6 +34,17 @@ namespace WebApplicationLocamerLDeMOg.Controllers
             {
                 return HttpNotFound();
             }
+
+            if(form["emplacement_id"] !=null)
+            {
+                DetailSej unDetailSejour = new DetailSej();
+                //Emplacement unEmplacement = db.Emplacement.Find(form["emplacement_id"]);
+                unDetailSejour.emplacement = Convert.ToInt32(form["emplacement_id"]);
+                unDetailSejour.idSejour = sejour.idSejour;
+                sejour.DetailSej.Add(unDetailSejour);
+                db.SaveChanges();
+            }
+            ViewBag.emplacement_id = new SelectList(db.Emplacement.ToList(), "emplacement1", "emplacement1");
             return View(sejour);
         }
 
