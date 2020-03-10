@@ -34,5 +34,21 @@ namespace WebApplicationLocamerLDeMOg.Models
         public virtual ICollection<DetailReserv> DetailReserv { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetailSej> DetailSej { get; set; }
+
+        public int CalculDuree()
+        {
+            TimeSpan span = dateFin.Subtract(dateDebut);
+            return (int)span.TotalDays;
+        }
+
+        public double CalculPrixEmplacement()
+        {
+            double resultat = 0;
+            foreach(DetailSej unDetailSej in DetailSej)
+            {
+                resultat = resultat + (unDetailSej.Emplacement1.Tarif.prix * CalculDuree());
+            }
+            return resultat;
+        }
     }
 }

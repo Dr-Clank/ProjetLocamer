@@ -22,7 +22,7 @@ namespace WebApplicationLocamerLDeMOg.Models
     
         public int codeTarif { get; set; }
         public string libelleTarif { get; set; }
-        public Nullable<double> prix { get; set; }
+        public double prix { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Emplacement> Emplacement { get; set; }
