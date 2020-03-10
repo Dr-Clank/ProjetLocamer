@@ -4,10 +4,12 @@
     ViewBag.Title = "Index";
 }
 
+<h1>Application de Gestion Locamer</h1>
+
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Créer un nouvel emplacement", "Create")
 </p>
 <table class="table">
     <tr>
@@ -34,8 +36,8 @@
             @Html.DisplayFor(modelItem => item.Tarif.libelleTarif)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.emplacement1 }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.emplacement1 })
+            @Html.ActionLink("Modifier", "Edit", new { id=item.emplacement1 }) |
+            @Html.ActionLink("Supprimer", "Delete", new { id=item.emplacement1 })
         </td>
     </tr>
 }
